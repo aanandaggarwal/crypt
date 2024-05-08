@@ -1,113 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Crypt</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to The Crypt</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+  <body>
     <div class="background-noise"></div>
     <header class="site-header">
-        <h1>The Crypt</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="social.html">Archive</a></li>
-                <li><a href="booking.html">Booking</a></li>
-            </ul>
-        </nav>
+      <h1>The Crypt</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h2>Dive Into the Underground</h2>
-                <p>Experience the heart of the New Brunswick's alternative scene.</p>
+      <section id="hero">
+        <div class="hero-content">
+          <h2>Dive Into the Underground</h2>
+          <p>Experience the heart of the New Brunswick's alternative scene.</p>
+        </div>
+      </section>
+      <div class="wrapper">
+      <section id="events">
+        <h2 class="section-title">Featured Events</h2>
+        <div class="events-slider">
+          <input type="radio" name="slider" id="event1" checked />
+          <input type="radio" name="slider" id="event2" />
+          <input type="radio" name="slider" id="event3" />
+          <div class="slides">
+            <div class="slide" id="slide1">
+              <h3>Tales From The Crypt - 4/27</h3>
+              <a href="events.html"
+                ><img
+                  src="images/flyer042724.jpg"
+                  alt="04/27/24 Tales From The Crypt Show Flyer"
+              /></a>
+              <p>
+                Rock out with Jay Rosie and The Transitive Property, and catch
+                some mellow vibes with Buffout!
+              </p>
             </div>
-        </section>
-        <section id="events">
-            <h2 class="section-title">Featured Events</h2>
-            <div class="events-slider">
-                <input type="radio" name="slider" id="event1" checked>
-                <input type="radio" name="slider" id="event2">
-                <input type="radio" name="slider" id="event3">
-                <div class="slides">
-                    <div class="slide" id="slide1">
-                        <h3>Tales From The Crypt - 4/27</h3>
-                        <a href="events.html"><img src="images/flyer042724.jpg"
-                                alt="04/27/24 Tales From The Crypt Show Flyer"></a>
-                        <p>Rock out with Jay Rosie and The Transitive Property, and catch some mellow vibes with
-                            Buffout!</p>
-                    </div>
-                    <div class="slide" id="slide2">
-                        <h3>Tales From The Crypt - 4/20</h3>
-                        <a href="events.html"><img src="images/flyer042024.jpg"
-                                alt="04/20/24 Tales From The Crypt Show Flyer"></a>
-                        <p>Help us welcome Cold Court and Lahnah, and enjoy drag by Haus of Cream!</p>
-                    </div>
-                    <div class="slide" id="slide3">
-                        <h3>Tales From The Crypt - 3/16</h3>
-                        <a href="events.html"><img src="images/flyer031624.jpg"
-                                alt="03/16/24 Tales From The Crypt Show Flyer"></a>
-                        <p>Come party with mt.ida, Potter's Field, Awfully Pretty, and Dead Sure!</p>
-                    </div>
-                </div>
-                <div class="controls">
-                    <label for="event1"></label>
-                    <label for="event2"></label>
-                    <label for="event3"></label>
-                </div>
+            <div class="slide" id="slide2">
+              <h3>Tales From The Crypt - 4/20</h3>
+              <a href="events.html"
+                ><img
+                  src="images/flyer042024.jpg"
+                  alt="04/20/24 Tales From The Crypt Show Flyer"
+              /></a>
+              <p>
+                Help us welcome Cold Court and Lahnah, and enjoy drag by Haus of
+                Cream!
+              </p>
             </div>
-        </section>
-        <section id="gallery">
-            <h2 class="section-title">Gallery</h2>
-            <div class="gallery">
-                <figure>
-                    <img src="images/lilperm.jpg" alt="Lil Perm peforming at The Crypt New Brunswick">
-                    <figcaption>@officialperm</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/publicaccess.jpg" alt="Public Access performing at The Crypt New Brunswick">
-                    <figcaption>@kenzcat3.jpeg</figcaption>
-                </figure>
+            <div class="slide" id="slide3">
+              <h3>Tales From The Crypt - 3/16</h3>
+              <a href="events.html"
+                ><img
+                  src="images/flyer031624.jpg"
+                  alt="03/16/24 Tales From The Crypt Show Flyer"
+              /></a>
+              <p>
+                Come party with mt.ida, Potter's Field, Awfully Pretty, and Dead
+                Sure!
+              </p>
             </div>
-            <p>Check out more pics and clips in the <a href="social.html">Archive</a>!</p>
-        </section>
-        <section id="info">
-            <h2 class="section-title">About The Crypt</h2>
-            <p>Founded years ago by a tight-knit group of musicians and friends, The Crypt began as a humble gathering
-                place for those all who loved music. What started as small jam sessions quickly evolved into an
-                innovative venue known for its electrifying atmosphere and inclusive spirit. Today, The Crypt stands as
-                a
-                sanctuary for all—from concert newbies to seasoned rockers and everyone in between. Here, music
-                transcends boundaries. We invite everyone to join us at The Crypt, where every night is an unforgettable
-                experience of
-                sounds and souls coming together.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Got a question? Reach out!</p>
-            <div class="contact-form">
-                <div class="input-group">
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Your Email">
-                    <textarea placeholder="Your Message"></textarea>
-                    <button>Send</button>
-                </div>
-            </div>
-        </section>
+          </div>
+          <div class="controls">
+            <label for="event1"></label>
+            <label for="event2"></label>
+            <label for="event3"></label>
+          </div>
+        </div>
+      </section>
+      <section id="gallery">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery">
+          <figure>
+            <a href="archive.html"><img
+              src="images/lilperm.jpg"
+              alt="Lil Perm peforming at The Crypt New Brunswick"
+            /></a>
+            <figcaption>@officialperm</figcaption>
+          </figure>
+          <figure>
+           <a href="archive.html"><img
+              src="images/publicaccess.jpg"
+              alt="Public Access performing at The Crypt New Brunswick"
+            /></a>
+            <figcaption>@kenzcat3.jpeg</figcaption>
+          </figure>
+          <figure>
+           <a href="archive.html"><img
+              src="images/cartripper.jpg"
+              alt="Cart Ripper performing at The Crypt New Brunswick"
+            /></a>
+            <figcaption>@cartripper.nb</figcaption>
+          </figure>
+          <figure>
+           <a href="archive.html"><img
+              src="images/davedeath.jpg"
+              alt="7/8/2023 Patchwork at the Crypt in New Brunswick, Nj"
+            /></a>
+            <figcaption>@davedeath</figcaption>
+          </figure>
+          <figure>
+           <a href="archive.html"><img
+              src="images/screenager.jpg"
+              alt="Screenager performing at The Crypt New Brunswick"
+            /></a>
+            <figcaption>@screenagerband</figcaption>
+          </figure>
+          <figure>
+           <a href="archive.html"><img
+              src="images/publicaccessband.jpg"
+              alt="Public Access performing at The Crypt New Brunswick"
+            /></a>
+            <figcaption>@publicaccessband</figcaption>
+          </figure>
+        </div>
+        <p style="margin: 20px;">
+          Check out more pics and clips in the
+          <a href="archive.html" class="site-link">Archive</a>!
+        </p>
+      </section>
+    </div>
+      <section id="info">
+        <h2 class="section-title">About The Crypt</h2>
+        <div class="wrapper">
+        <p>
+          Founded years ago by a tight-knit group of musicians and friends, The
+          Crypt began as a humble gathering place for those all who loved music.
+          What started as small jam sessions quickly evolved into an innovative
+          venue known for its electrifying atmosphere and inclusive spirit.
+          Today, The Crypt stands as a sanctuary for all—from concert newbies to
+          seasoned rockers and everyone in between. Here, music transcends
+          boundaries. We invite everyone to join us at The Crypt, where every
+          night is an unforgettable experience of sounds and souls coming
+          together.
+        </p>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Got a question? Reach out!</p>
+        <div class="contact-form">
+          <div class="input-group">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea placeholder="Your Message"></textarea>
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
+      </section>
     </main>
     <footer>
-        <p>Connect with us on social media for the latest updates!</p>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/the_crypt_nb/?hl=en" target="_blank" aria-label="Instagram">
-                <img src="images/instagram-icon.png" alt="Instagram Icon">
-            </a>
-        </div>
+      <p>Connect with us on social media for the latest updates!</p>
+      <div class="social-icons">
+        <a
+          href="https://www.instagram.com/the_crypt_nb/?hl=en"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <img src="images/instagram-icon.png" alt="Instagram Icon" />
+        </a>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
