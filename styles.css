@@ -66,6 +66,7 @@ nav a:hover {
 nav a.active {
   color: var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
+  margin-bottom: 5px;
 }
 
 .section-title {
@@ -364,6 +365,10 @@ footer p {
 
 #booking-info p {
   margin-bottom: 15px;
+}
+
+#booking-info ul {
+  list-style: none;
 }
 
 .contact-form form {
