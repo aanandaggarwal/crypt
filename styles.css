@@ -64,17 +64,39 @@ nav a:hover {
 }
 
 nav a.active {
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   margin: 0 20px;
 }
 
-.wrapper{
-    margin: 0 20px;
+.main {
+  overflow: hidden;
+}
+
+.glow {
+  font-size: 2.5em;
+  color: #ffffff;
+  font-weight: lighter;
+  text-align: left;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+  }
+
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 15px var(--accent-color), 0 0 20px var(--accent-color), 0 0 25px var(--accent-color), 0 0 30px var(--accent-color);
+  }
+}
+
+.wrapper {
+  margin: 10px 20px;
 }
 
 .hero-content {
@@ -113,10 +135,10 @@ nav a.active {
   margin: 20px;
 }
 
-.slide h3{
-    color: var(--accent-color);
-    font-size: 1.5em;
-    font-weight: bold;
+.slide h3 {
+  color: var(--accent-color);
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .slide p {
@@ -146,15 +168,15 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="radio"]:nth-child(1):checked ~ .slides {
+input[type="radio"]:nth-child(1):checked~.slides {
   transform: translateX(0);
 }
 
-input[type="radio"]:nth-child(2):checked ~ .slides {
+input[type="radio"]:nth-child(2):checked~.slides {
   transform: translateX(-100%);
 }
 
-input[type="radio"]:nth-child(3):checked ~ .slides {
+input[type="radio"]:nth-child(3):checked~.slides {
   transform: translateX(-200%);
 }
 
@@ -191,8 +213,8 @@ figcaption {
   background: rgba(0, 0, 0, 0.7);
 }
 
-#contact{
-    text-align: center;
+#contact {
+  text-align: center;
 }
 
 .contact-form .input-group {
@@ -331,7 +353,7 @@ footer p {
 #booking-info {
   padding: 40px;
   padding-top: 0px;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--primary-color);
   color: var(--text-color);
 }
 
@@ -389,40 +411,46 @@ input[type="date"]::placeholder {
 }
 
 #video-archive {
-    padding: 20px;
-    padding-top: 0px;
-    background: rgba(0, 0, 0, 0.8);
-    color: var(--text-color);
-  }
-  
-  #video-archive h2 {
-    color: var(--accent-color);
-  }
-
-  
-  .video-archive {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 20px;
-  }
-  
-  iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9; 
-    border: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-  }
-  
-  @media (max-width: 768px) {
-    .video-archive, .instagram-posts {
-      grid-template-columns: 1fr;
-    }
-  }
-
-#instagram-feed{
   padding: 20px;
-  padding-top: 0px;
+  padding-top: 10px;
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+#video-archive h2 {
+  color: var(--accent-color);
+}
+
+#video-archive p {
+  margin-bottom: 10px;
+}
+
+.video-archive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+
+  .video-archive,
+  .instagram-posts {
+    grid-template-columns: 1fr;
+  }
+}
+
+#instagram-feed {
+  padding: 20px;
+  padding-top: 10px;
+  overflow: hidden;
   background: rgba(0, 0, 0, 0.7);
   margin-bottom: 20px;
 }
@@ -436,102 +464,108 @@ input[type="date"]::placeholder {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  overflow: hidden;
 }
 
 .hero-content2 {
-    padding: 50px 20px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    animation: fadeIn 2s ease-out;
+  padding: 50px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 2s ease-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .notable-events {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    color: var(--text-color);
-    text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--text-color);
+  text-align: center;
 }
 
 .events-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
 
 figure {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
 figure:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 figure img {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: cover; 
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 figcaption {
-    color: var(--accent-color);
-    margin-top: 10px;
+  color: var(--accent-color);
+  margin-top: 10px;
 }
 
 .timeline {
-    background: var(--primary-color);
-    padding: 20px;
-    color: var(--text-color);
-    position: relative;
-    overflow: hidden;
+  background: var(--primary-color);
+  padding: 20px;
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
 }
 
 .timeline ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 
 .timeline li {
-    margin: 20px 0;
-    position: relative;
+  margin: 20px 0;
+  position: relative;
 }
 
 .timeline-content {
-    border-left: 2px solid var(--accent-color);
-    padding-left: 20px;
-    margin-left: 10px;
-    transition: all 4.5s ease-in-out;
+  border-left: 2px solid var(--accent-color);
+  padding-left: 20px;
+  margin-left: 10px;
+  transition: all 4.5s ease-in-out;
 }
 
 .timeline-content:hover {
-    background: rgba(34, 34, 34, 0.9);
+  background: rgba(34, 34, 34, 0.9);
 }
 
 .timeline-content h3 {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .is-visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
